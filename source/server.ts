@@ -3,6 +3,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import logging from './config/logging';
 import config from './config/config';
+import sampleRoutes from './routes/sample';
 
 const NAMESPACE='Server';
 const app=express();
@@ -37,6 +38,7 @@ app.use((req,res,next)=>{
     next();
 });
 
+app.use('/sample', sampleRoutes);
 
 app.use((req, res, next) => {
     const error = new Error('Not found');
