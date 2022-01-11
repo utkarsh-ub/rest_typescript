@@ -6,5 +6,7 @@ const router=express.Router();
 
 router.get('/ping',controller.serverCheck);
 
+router.post('/ping',controller.adding);
+
 export=router;
 

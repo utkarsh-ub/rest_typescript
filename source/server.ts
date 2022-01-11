@@ -49,6 +49,7 @@ app.use((req, res, next) => {
 });
 
 
-const httpServer=http.createServer(app);
 
+
+const httpServer=http.createServer(app);
 httpServer.listen(config.server.port,()=>logging.info(NAMESPACE,`server is running on ${config.server.hostname}:${config.server.port}`) );
